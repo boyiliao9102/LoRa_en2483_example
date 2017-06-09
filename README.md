@@ -1,3 +1,3 @@
-# LoRa_en2483_example
+# LoRa_en2483_example code
 
-This is for RN2483 raspberry pi "rn2483_interactive_shell.py" C language version.
+This is RN2483 for raspberry pi "rn2483_interactive_shell.py" C language version.
