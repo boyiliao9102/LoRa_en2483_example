@@ -137,8 +137,10 @@ START:
 #endif
 
     if(send_msg_size == 5){  
-         if(strncmp(send_msg_in,"exit",4) == 0)
+         if(strncmp(send_msg_in,"exit",4) == 0){
+             printf("Bye Bye !!\n");
              return 0;
+         }
     }
 
     // append 0x0d 0x0a 0x00 to cmd string.
