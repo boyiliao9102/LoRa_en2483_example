@@ -8,6 +8,7 @@
 
 #define DEBUG 0
 
+char init_msg[]="rn2483_interface_c example code version 0.1 \nTerminal the program when input \"exit\"\n ";
 
 int set_interface_attribs (int fd, int speed, int parity)
 {
@@ -118,8 +119,11 @@ int main(void)
     set_blocking (fd, 0);                // set no blocking
     //set_blocking (fd, 1);                // set blocking
 
+    //init message
+    printf("%s\n",init_msg);
 
 START:
+
 
     // process user command
     memset(send_msg_in,0,strlen(send_msg_in));
@@ -133,7 +137,7 @@ START:
 #endif
 
     if(send_msg_size == 5){  
-         if(strncmp(send_msg_in,"quit",4) == 0)
+         if(strncmp(send_msg_in,"exit",4) == 0)
              return 0;
     }
 
@@ -211,7 +215,6 @@ START:
 goto START;
  
    close(fd);
-    
     
     return 0;
 }
