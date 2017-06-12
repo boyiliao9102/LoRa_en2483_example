@@ -165,7 +165,8 @@ START:
     write (fd, send_msg_in, strlen(send_msg_in));           // send character greeting
 
     //usleep (100*1000);                    
-    usleep ((7 + 25) * 100);             // sleep enough to transmit the 7 plus
+    //usleep ((7 + 25) * 100);             // sleep enough to transmit the 7 plus
+    usleep ((7 + 10) * 100);             // sleep enough to transmit the 7 plus
                                            // receive 25:  approx 100 uS per char transmit
 
      
@@ -216,7 +217,7 @@ START:
 
 goto START;
  
-   close(fd);
+    close(fd);
     
     return 0;
 }
